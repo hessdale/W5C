@@ -41,7 +41,93 @@ footer {
     font-style: oblique;
 }
 
+section p {
+    filter: blur(5px);
+}
+
 .imagecropper {
     height: 200px;
     width: 275px;
+
+}
+
+section p:hover {
+    filter: none;
+    transition: all ease-in-out 1s;
+}
+
+main .imagecropper:active {
+    rotate: 360deg;
+    transition: all ease-in-out 3s;
+}
+
+#price:hover {
+    background-color: red;
+    transition: all ease-in-out 3s;
+}
+
+h3:active {
+    animation-name: fadeback;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#img1 {
+    opacity: 0;
+}
+
+#img1:hover {
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+#img2:hover {
+    animation-name: fadeout;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeback {
+    0% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: white;
+        opacity: 50%;
+    }
+}
+
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
